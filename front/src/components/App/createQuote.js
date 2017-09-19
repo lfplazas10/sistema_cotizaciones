@@ -1,3 +1,4 @@
+//Se pudo haber definido como una constante dentro de el archivo index.js
 import fetch from 'isomorphic-fetch';
 
 export function createQuote(data) {
