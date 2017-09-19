@@ -7,10 +7,9 @@ var MongoClient = require('mongodb').MongoClient;
 var bodyParser = require('body-parser');
 
 //var url = 'mongodb://localhost:27017/mongo_proyecto2';
+
+//Las URLS o credenciales sensibles se deberían establecer como variables de entorno
 var url = 'mongodb://web:123456Sha@ds141524.mlab.com:41524/shaserviciocotizaciones'
-
-
-
 
 function getProductos(callback) {
     MongoClient.connect(url, function (err, db) {
@@ -171,6 +170,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 //To prevent errors from Cross Origin Resource Sharing, we will set 
 //our headers to allow CORS with middleware like so:
+//Que chevere esto
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -191,7 +191,7 @@ app.use(function (req, res, next) {
 //Use our router configuration when we call /api
 //app.use('/api', router);
 
-
+//Jaja yo también usé el mismo ejemplo, pero es mejor no dejar endpoints abiertos que no se van a usar.
 router.get('/users', function(req, res, next) {
     // Comment out this line:
  //res.send('respond with a resource');
@@ -212,10 +212,11 @@ module.exports = router;
 //app.use("/public", express.static("./static"));
 
 app.use(express.static(path.join(__dirname,'front/build/')));
+
+//Es mejor no dejar endpoints abiertos que no se van a usar.
 app.get('/', function (req, res) {
     res.send('hello world');
 });
-
 
 app.get('/products', function (req, res) {
 
@@ -244,6 +245,7 @@ app.post('/cotizacion', function (req, res) {
     
     console.log(req);
 
+    //Se podría hacer con una función map
     var cotizacion = {};   
     cotizacion.email = req.body.email;
     cotizacion.fecha = req.body.fecha;
