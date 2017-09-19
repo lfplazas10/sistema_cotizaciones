@@ -5,6 +5,7 @@ from 'react';
 import logo from './logo.svg';
 import './style.css';
 import { createQuote } from './createQuote'
+//De nuevo, buen uso de los constructores, clases y funciones de JS.
 class App extends Component {
     constructor(props) {
         super(props);
