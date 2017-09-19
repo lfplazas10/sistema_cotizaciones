@@ -5,6 +5,7 @@ from 'react';
 import logo from './logo.svg';
 import './style.css';
 import { createQuote } from './createQuote'
+//Bien definido el constructor
 class App extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +23,7 @@ class App extends Component {
         this.phoneChange = this.phoneChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    //Se pudieron haber usado arrow functions.
     handleClick() {
         this.setState( { condition : !this.state.condition } ); 
     }
