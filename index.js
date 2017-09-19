@@ -292,7 +292,7 @@ app.post('/producto', function (req, res) {
 app.delete('/producto/:productId', function (req, res) {
     let productId = req.params.productId;
     
-    
+    console.log('HOLA');
    deleteProducto(function (err, productos ) {
         if (err) {
             res.json(["Error obteniendo productos"]);

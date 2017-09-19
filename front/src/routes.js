@@ -6,8 +6,8 @@ import Admin from './components/Admin';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={App} />
-    <Route path="/admin" component={Admin} />
+    <Route path="/" component={Admin} />
+    <Route path="/admin" component={App} />
   </Router>
 );
 
