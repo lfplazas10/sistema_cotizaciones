@@ -11,7 +11,7 @@ export default class Admin extends Component {
         };
 
     }
-    
+    //Para cuestiones de legibilidad es bueno dejar el código bien indentado.
         componentDidMount() {
             fetch('/cotizaciones').then(res => res.json()).then(quotes => this.setState({
                 quotes
